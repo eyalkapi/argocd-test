@@ -2,13 +2,13 @@ image:
   repository: registry.redhat.io/rh-sso-7/sso74-openshift-rhel8
   tag: 7.4
  
-rhsso_namespace: rh-sso
+rhsso_namespace: rh-sso2
  
 APPLICATION_NAME: "sso"
 SSO_HOSTNAME: ""
 JGROUPS_CLUSTER_PASSWORD: "Aa123456"
 DB_JNDI: "java:jboss/datasources/KeycloakDS"
-DB_DATABASE: "ssodb"
+DB_DATABASE: "ssodb2"
 VOLUME_CAPACITY: "1Gi"
 SSO_ADMIN_USERNAME: "admin"
 SSO_ADMIN_PASSWORD: "Aa123456"
@@ -16,10 +16,10 @@ SSO_REALM: ""
 SSO_SERVICE_USERNAME: ""
 SSO_SERVICE_PASSWORD: ""
 MEMORY_LIMIT: "1Gi"
-SSO_POSTGRESQL_PORT: "tcp://ssodb.pgo.svc.cluster.local:5432"
-SSO_POSTGRESQL_PORT_5432_TCP: "tcp://ssodb.pgo.svc.cluster.local:5432"
-SSO_POSTGRESQL_SERVICE_HOST: "ssodb.pgo.svc.cluster.local"
-SSO_POSTGRESQL_PORT_5432_TCP_ADDR: "ssodb.pgo.svc.cluster.local"
+SSO_POSTGRESQL_PORT: "tcp://ssodb2.pgo2.svc.cluster.local:5432"
+SSO_POSTGRESQL_PORT_5432_TCP: "tcp://ssodb2.pgo2.svc.cluster.local:5432"
+SSO_POSTGRESQL_SERVICE_HOST: "ssodb2.pgo2.svc.cluster.local"
+SSO_POSTGRESQL_PORT_5432_TCP_ADDR: "ssodb2.pgo2.svc.cluster.local"
 HOSTNAME_HTTP: ""
  
 HTTPS_SECRET: sso-app-secret 
@@ -36,15 +36,15 @@ SSO_TRUSTSTORE_SECRET: sso-app-secret
  
 # DB VARS
 pgcluster:
-  PG_CLUSTER_NAME: "ssodb"
-  PG_NAMESPACE: "pgo"
+  PG_CLUSTER_NAME: "ssodb2"
+  PG_NAMESPACE: "pgo2"
   PG_PGO_VERSION: 4.3.0
   PG_STORAGE_CLASS: managed-premium
   PG_STORAGE_SIZE: 1G
   PG_IMAGE_NAME: crunchy-postgres-ha
   PG_IMAGE_TAG: centos7-12.2-4.3.0
-  PG_DATABASE_NAME: ssodb
+  PG_DATABASE_NAME: ssodb2
   PG_REPLICAS: "2"
-  PG_SERVICE_PREFIX: "ssodb.pgo"
+  PG_SERVICE_PREFIX: "ssodb2.pgo2"
   DB_USERNAME: myuser
   DB_PASSWORD: password
