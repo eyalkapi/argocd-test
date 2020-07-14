@@ -2,7 +2,7 @@ image:
   repository: registry.redhat.io/rh-sso-7/sso74-openshift-rhel8
   tag: 7.4
  
-rhsso_namespace: rh-sso2
+rhsso_namespace: rh-sso3
  
 APPLICATION_NAME: "sso"
 SSO_HOSTNAME: ""
