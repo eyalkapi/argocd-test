@@ -37,7 +37,7 @@ SSO_TRUSTSTORE_SECRET: sso-app-secret
 # DB VARS
 pgcluster:
   PG_CLUSTER_NAME: "ssodb2"
-  PG_NAMESPACE: "pgo2"
+  PG_NAMESPACE: "pgo"
   PG_PGO_VERSION: 4.3.0
   PG_STORAGE_CLASS: managed-premium
   PG_STORAGE_SIZE: 1G
