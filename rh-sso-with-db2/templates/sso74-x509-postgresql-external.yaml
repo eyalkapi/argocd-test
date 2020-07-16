@@ -293,7 +293,7 @@ data:
     path=\"application-roles.properties\" relative-to=\"jboss.server.config.dir\"/>\n
     \               </authorization>\n                <server-identities>\n                    <ssl>\n
     \                       <keystore  path=\"/etc/eap-secret-volume/keystore.jks\"
-    keystore-password=\"redhat\"/>\n                    </ssl>\n                </server-identities>\n
+    keystore-password=\"passphrase\"/>\n                    </ssl>\n                </server-identities>\n
     \           </security-realm>\n          <security-realm name=\"ssl-realm\">\n
     \           <server-identities>\n              <ssl>\n                <keystore
     path=\"/etc/eap-secret-volume/keystore.jks\" keystore-password=\"passphrase\"/>\n
@@ -464,7 +464,7 @@ data:
     type=\"SYM_ENCRYPT\"> <property name=\"provider\">SunJCE</property> <property
     name=\"sym_algorithm\">AES</property> <property name=\"encrypt_entire_message\">true</property>
     <property name=\"keystore_name\">/etc/jgroups-encrypt-secret-volume/jgroups.jceks</property>
-    <property name=\"store_password\">redhat</property> <property name=\"alias\">secret-key</property>
+    <property name=\"store_password\">passphrase</property> <property name=\"alias\">secret-key</property>
     </protocol>\n                    <protocol type=\"pbcast.NAKACK2\"/>\n                    <protocol
     type=\"UNICAST3\"/>\n                    <protocol type=\"pbcast.STABLE\"/>\n
     \                   \n <auth-protocol type=\"AUTH\">\n <digest-token algorithm=\"SHA-512\">\n
@@ -481,7 +481,7 @@ data:
     type=\"SYM_ENCRYPT\"> <property name=\"provider\">SunJCE</property> <property
     name=\"sym_algorithm\">AES</property> <property name=\"encrypt_entire_message\">true</property>
     <property name=\"keystore_name\">/etc/jgroups-encrypt-secret-volume/jgroups.jceks</property>
-    <property name=\"store_password\">redhat</property> <property name=\"alias\">secret-key</property>
+    <property name=\"store_password\">passphrase</property> <property name=\"alias\">secret-key</property>
     </protocol>\n                    <protocol type=\"pbcast.NAKACK2\"/>\n                    <protocol
     type=\"UNICAST3\"/>\n                    <protocol type=\"pbcast.STABLE\"/>\n
     \                   \n <auth-protocol type=\"AUTH\">\n <digest-token algorithm=\"SHA-512\">\n
@@ -665,7 +665,7 @@ data:
     name=\"default\" enabled=\"true\"><properties></properties></provider></spi>\n
     \           <spi name=\"truststore\"><provider name=\"file\" enabled=\"true\"><properties><property
     name=\"file\" value=\"/etc/sso-secret-volume/truststore.jks\"/><property name=\"password\"
-    value=\"redhat\"/><property name=\"hostname-verification-policy\" value=\"WILDCARD\"/><property
+    value=\"passphrase\"/><property name=\"hostname-verification-policy\" value=\"WILDCARD\"/><property
     name=\"disabled\" value=\"false\"/></properties></provider></spi>\n            <!--
     ##SSO_VAULT_CONFIG## -->\n        </subsystem>\n    </profile>\n    <interfaces>\n
     \       <interface name=\"management\">\n            <inet-address value=\"${jboss.bind.address.management:127.0.0.1}\"/>\n
